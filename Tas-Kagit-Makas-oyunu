@@ -1,0 +1,81 @@
+{
+ "cells": [
+  {
+   "cell_type": "code",
+   "execution_count": 15,
+   "id": "24fda7dc-e691-496c-8b66-261147b1d037",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdin",
+     "output_type": "stream",
+     "text": [
+      "taş mı, kağıt mı, makas mı\n",
+      " taş\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Bilgisayar seçimi: taş\n",
+      "Berabere\n"
+     ]
+    }
+   ],
+   "source": [
+    "\n",
+    "#Rastgele seçimler yapabilmek  adına random kütüphanesini kullanıyoruz.\n",
+    "import random\n",
+    "\n",
+    "#seçenekler listemi  oluşturdum.\n",
+    "secenekler=[\"taş\",\" kağıt\",\" makas\"]\n",
+    "\n",
+    "#Bu seçeneklerden seçim yapmamız gerekli.\n",
+    "seçim=input(\"taş mı, kağıt mı, makas mı\\n\")\n",
+    "\n",
+    "#Bilgisayarın seçimi\n",
+    "bilgisayar=random.choice(secenekler)\n",
+    "print(\"Bilgisayar seçimi:\" , bilgisayar)\n",
+    "\n",
+    "if seçim == bilgisayar:\n",
+    "    print(\"Berabere\")\n",
+    "    \n",
+    "#Tüm kazanma olasılıklarım\n",
+    "elif (seçim==\"taş\" and bilgisayar == \"makas\") or (seçim == \"makas\" and bilgisayar == \"kağıt\") or (seçim == \"kağıt\" and bilgisayar == \"taş\"):\n",
+    "    print(\"Ben kazandım\")\n",
+    "else:\n",
+    "    print(\"Bilgisayar kazandı\")"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "ddc51c32-9f20-45e7-b30f-4f24eee04fbb",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python [conda env:base] *",
+   "language": "python",
+   "name": "conda-base-py"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.12.7"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}
